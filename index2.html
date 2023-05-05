@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Circle of Fifths</title>
+	<style>
+		/* Styles for the Circle of Fifths */
+		.circle {
+			display: flex;
+			flex-wrap: wrap;
+			width: 600px;
+			height: 600px;
+			border-radius: 50%;
+			border: 2px solid black;
+			margin: 50px auto;
+			padding: 20px;
+			position: relative;
+		}
+		
+		.circle::before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			border: 2px solid black;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+		
+		.note {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100px;
+			height: 100px;
+			background-color: white;
+			border: 2px solid black;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 24px;
+			font-weight: bold;
+			text-align: center;
+			text-transform: uppercase;
+			user-select: none;
+		}
+		
+		.note:hover {
+			background-color: #eee;
+			cursor: pointer;
+		}
+		
+		/* Colors for the notes */
+		.c, .am { background-color: #f00; color: #fff; }
+		.g, .em { background-color: #f90; color: #000; }
+		.d, .bm { background-color: #ff0; color: #000; }
+		.a, .fsm { background-color: #0f0; color: #000; }
+		.e, .csm { background-color: #0ff; color: #000; }
+		.b, .gsm { background-color: #90f; color: #000; }
+		.fsm, .dsm { background-color: #f0f; color: #fff; }
+		.csm, .asm { background-color: #999; color: #fff; }
+		.f, .dm { background-color: #000; color: #fff; }
+		.bf, .gm { background-color: #333; color: #fff; }
+		.ef, .cm { background-color: #666; color: #fff; }
+		.af, .fm { background-color: #999; color: #fff; }
+		.df { background-color: #ccc; color: #fff; }
+	</style>
+</head>
+<body>
+	<div class="circle">
+		<div class="note c">C</div>
+		<div class="note g">G</div>
+		<div class="note d">D</div>
+		<div class="note a">A</div>
+		<div class="note e">E</div>
+		<div class="note b">B</div>
+		<div class="note fsm">F# / Gb</div>
+		<div class="note csm">C# / Db</div>
+		<div class="note fm">F</div>
+		<div class="note gm">Bb</div>
+		<div class="note cm">Eb</div>
+		<div class="note am">Ab</div>
+	
+    </div>
+</body>
+</html>
